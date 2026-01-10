@@ -22,7 +22,7 @@ cffi==2.0.0
 chardet==3.0.4
 charset-normalizer==3.4.2
 click==8.2.1
--e git+https://github.com/Sowmyalt/Chicken-Disease-Classification.git@9f8ea35f8c6370b49ee44176b5a940339e1aa40d#egg=cnnClassifier
+
 colorama==0.4.6
 comm==0.2.2
 contourpy
