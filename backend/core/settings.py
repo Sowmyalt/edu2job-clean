@@ -142,11 +142,16 @@ REST_FRAMEWORK = {
 # CORS Config
 # CORS Config
 # Security
+# Security
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    origin.strip().rstrip('/')
-    for origin in os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',')
-]
+
+if os.getenv('CORS_ALLOW_ALL_ORIGINS', 'False') == 'True':
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    CORS_ALLOWED_ORIGINS = [
+        origin.strip().rstrip('/')
+        for origin in os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',')
+    ]
 
 # Encryption Key (Generated for this environment)
 # In production, this should be in environment variables
