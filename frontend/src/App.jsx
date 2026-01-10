@@ -34,6 +34,7 @@ const Home = () => (
 
 // Trigger Vercel Redeploy: Update Backend URL
 function App() {
+  console.log("DEBUG: VITE_API_URL is:", import.meta.env.VITE_API_URL);
   const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "YOUR_GOOGLE_CLIENT_ID";
 
   return (
